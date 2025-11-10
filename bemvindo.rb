@@ -1,0 +1,1 @@
+puts "BOm dia. O meu nome é Sofia e hoje são #{Time.now.strftime("%d/%m/%Y")}."
