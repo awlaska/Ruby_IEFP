@@ -11,15 +11,17 @@
 
 # verificalog
 
-class Log
-  def initialize(nome)
-    @nome = nome
+# Variáveis de Instância
+# Armazenam o estado de um objeto e começam com @
+class Log                 # Declara uma nova classe (um modelo ou um blueprint) chamada Log
+  def initialize(nome)    # Construtor da classe
+    @nome = nome          # Variável de instância para armazenar o nome do ficheiro de log
   end
 
-  def mostrar
+  def mostrar             # Método de Instância para mostrar o nome do ficheiro de log
     puts "Analisando o ficheiro: #{@nome}"
   end
 end
 
-log1=Log.new("firewall.log")
-log1.mostrar
+log1=Log.new("firewall.log")    # Cria uma nova instância da classe Log com o nome do ficheiro "firewall.log"
+log1.mostrar                    # Imprime a mensagem com o nome do ficheiro de log
