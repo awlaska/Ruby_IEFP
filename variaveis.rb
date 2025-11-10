@@ -22,3 +22,4 @@ class Log
 end
 
 log1=Log.new("firewall.log")
+log1.mostrar
