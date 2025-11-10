@@ -63,3 +63,64 @@ puts NOME_CURSO
 log = {nivel: :erro, mensagem: "Falha de autenticação"}
 puts log[:nivel]
 
+# # 2.9. Diferença entre String e Símbolo
+puts "erro".object_id
+puts "erro".object_id
+puts :erro.object_id
+puts :erro.object_id
+
+# # 2.10. Aplicação Prática em Cibersegurança
+class EventoSeguranca
+    attr_reader :tipo, :mensagem
+
+    def initialize(tipo, mensagem)
+        @tipo = tipo
+        @mensagem = mensagem
+    end
+
+    def mostrar
+        puts "[#{@tipo.upcase}] #{@mensagem}"
+    end
+end
+
+e1 = EventoSeguranca.new(:erro, "Acesso não autorizado detetado")
+e1.mostrar
+
+# # 2.11 Exercícios Práticos
+# # # 2.11.1.
+$AUTOR = "Sofia"
+
+def mostrar_autor
+    puts "Autor: #{$AUTOR}"
+end
+
+mostrar_autor
+
+# # # 2.11.2.
+class Sistema
+    @@total_alertas = 0
+
+    def initialize(nome)
+        @@total_alertas += 1
+    end
+
+    def adicionar_alerta()
+        @@total_alertas += 1
+    end
+
+    def self.mostrar_total()
+        puts "Total de alertas: #{@@total_alertas}"
+    end
+end
+
+Sistema.new("A1")
+Sistema.new("A2")
+Sistema.mostrar_total
+
+# # # 2.11.3.
+e1 = EventoSeguranca.new(:erro, "Acesso não autorizado detetado")
+e1.mostrar
+e2 = EventoSeguranca.new(:info, "Está a aceder a uma pasta pública.")
+e2.mostrar
+e3 = EventoSeguranca.new(:aviso, "Acesso restrito, não partilhe com externos.")
+e3.mostrar
