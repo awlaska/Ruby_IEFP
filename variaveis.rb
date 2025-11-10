@@ -20,3 +20,5 @@ class Log
     puts "Analisando o ficheiro: #{@nome}"
   end
 end
+
+log1=Log.new("firewall.log")
