@@ -1,3 +1,11 @@
+# Table of Contents
+[Variáveis de Tipos de Dados](#VariaveisdeTiposdedados)
+[Operações Básicas](#operações-básicas)
+[]()
+[]()
+[]()
+
+
 # Variáveis de Tipos de dados
 **Strings** são letras, números, etc.
 **Integer** são números inteiros
