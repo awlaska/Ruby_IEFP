@@ -136,3 +136,60 @@ puts linha.include?("ERRO")
 entrada = "   utilizador"
 puts entrada.strip
 
+log = "INFO,2025-11-16,Servidor1"
+partes = log.split(",")
+puts partes.inspect
+
+linha = "ERRO: erro de leitura"
+puts linha
+puts linha.sub("erro", "problema")
+
+linha = "erro erro erro"
+puts linha
+puts linha.gsub("erro", "alerta")
+
+valor = "25"
+puts valor.to_i + 5
+
+puts 3.14.to_s
+puts true.to_s
+
+linha_log = "2025-10-31 10:00:00 INFO Serviço iniciado"
+
+if linha_log.include?("INFO")
+  puts "Evento informativo detetado"
+end
+
+tempo_execucao = 3.45
+
+# Exercicios
+# 1
+numero = 3
+puts numero.even?
+
+# 2
+mensagem = "ERRO: base de dados inacessível"
+
+puts mensagem.sub("ERRO", "ALERTA")
+puts mensagem
+
+# 3
+intervalo = 400..499
+
+if intervalo.include?(403)
+  puts "O numero 403 esta incluído"
+end
+
+# ou
+
+intervalo = 400..499
+codigo = 403
+
+puts intervalo.include?(codigo)
+
+# 4
+log = "2025-02-10, 08:12:14, INFO, Booting application version 3.4.1"
+
+array = log.split(",")
+puts array[0]
+puts array[2]
