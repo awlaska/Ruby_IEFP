@@ -1,9 +1,14 @@
 # Table of Contents
-[Variáveis de Tipos de Dados](#VariaveisdeTiposdedados)
-[Operações Básicas](#operações-básicas)
-[]()
-[]()
-[]()
+- [Variáveis de Tipos de Dados](#VariaveisdeTiposdedados)  
+- [Operações Básicas](#operações-básicas)  
+- [Condições](#condições-ifelse)  
+- [Ciclos](#ciclos)  
+  - [While](#while)  
+  - [For](#for)  
+- [Array](#array-listas)  
+- [Métodos](#métodos-funções)
+- [Classes e Objetos](#classes-e-objetos)
+
 
 
 # Variáveis de Tipos de dados
