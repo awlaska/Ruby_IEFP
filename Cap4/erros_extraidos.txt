@@ -1,0 +1,5 @@
+--- Relatórios de Erros ---
+[2025-02-10 08:14:10] ERROR – Redis connection lost
+[2025-02-10 08:15:47] ERROR – PaymentService::ChargeFailure card declined
+[2025-02-10 08:18:10] ERROR – File write failed: permissions error
+[2025-02-10 08:21:15] ERROR – Database query timeout after 5000ms
