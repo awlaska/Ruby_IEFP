@@ -1,0 +1,45 @@
+[2025-02-10 08:12:14] INFO – Booting application version 3.4.1
+[2025-02-10 08:12:15] DEBUG – Loading environment variables
+[2025-02-10 08:12:15] DEBUG – ENV loaded: production
+[2025-02-10 08:12:17] INFO – Worker pool initialized with 8 threads
+
+[2025-02-10 08:13:02] INFO – Incoming request: GET /api/status
+[2025-02-10 08:13:02] INFO – Response: 200 OK, time=12ms
+
+[2025-02-10 08:13:45] WARN – CPU usage reached 92% 
+[2025-02-10 08:13:46] WARN – CPU usage still high: 95%
+
+[2025-02-10 08:14:10] ERROR – Redis connection lost
+[2025-02-10 08:14:10] DEBUG – Attempting to reconnect to Redis…
+[2025-02-10 08:14:12] INFO – Redis reconnected after 2 attempts
+
+[2025-02-10 08:15:03] DEBUG – Query executed: SELECT * FROM users WHERE id=42 
+[2025-02-10 08:15:03] INFO – Query result: 1 row
+
+[2025-02-10 08:15:47] ERROR – PaymentService::ChargeFailure card declined
+[2025-02-10 08:15:47] DEBUG – Payload: {“user_id”:123, “amount”:49.99, “currency”:“EUR”}
+
+[2025-02-10 08:16:20] INFO – Cron job started: cleanup_sessions
+[2025-02-10 08:16:21] INFO – Deleted 532 expired sessions
+[2025-02-10 08:16:21] INFO – Cron job finished successfully
+
+[2025-02-10 08:17:34] WARN – Slow request detected: POST /api/upload took 1230ms
+
+[2025-02-10 08:18:10] ERROR – File write failed: permissions error
+[2025-02-10 08:18:11] INFO – Retrying with elevated permissions
+[2025-02-10 08:18:11] INFO – File write succeeded
+
+[2025-02-10 08:19:54] DEBUG – Cache miss for key: sessions:active
+[2025-02-10 08:19:54] DEBUG – Regenerating cache…
+
+[2025-02-10 08:20:02] INFO – User login: id=88, email=user@example.com
+[2025-02-10 08:20:03] WARN – Suspicious login attempt detected from IP 85.23.101.7
+[2025-02-10 08:20:03] INFO – Security event logged
+
+[2025-02-10 08:21:15] ERROR – Database query timeout after 5000ms
+[2025-02-10 08:21:15] DEBUG – Statement: UPDATE orders SET status=‘paid’ WHERE id=5782
+
+[2025-02-10 08:22:44] INFO – Graceful shutdown initiated
+[2025-02-10 08:22:45] INFO – Stopping worker threads
+[2025-02-10 08:22:46] INFO – Flushing logs
+[2025-02-10 08:22:47] INFO – Application stopped successfully

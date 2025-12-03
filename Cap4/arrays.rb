@@ -38,3 +38,40 @@ evento = {
 puts evento[:nivel]     # ERRO
 puts evento[:mensagem]  #Conexão perdida
 
+puts evento.keys
+puts evento.values
+puts evento.has_key?(:nivel)
+puts evento.delete(:nivel)
+
+config_padrao = {porta: 22, ativo: true}
+config_local = {porta:8080}
+
+config_final = config_padrao.merge(config_local)
+puts config_final
+
+## Ficheiros
+conteudo = File.read("sistema.log")
+puts conteudo.length
+
+File.foreach("sistema.log") do |linha|
+  puts linha if linha.include?("ERRO")
+end
+
+File.open("resultado.txt", "w") do |f|
+  f.puts "Relatório de Análise"
+  f.puts "Total de eventos: 20"
+end
+
+erros = []
+
+File.foreach("eventos.log") do |linha|
+  if linha.include?("ERRO")
+      erros << linha.strip
+  end
+end
+
+File.open("erros_extraidos.txt", "w") do |f|
+    f.puts "--- Relatórios de Erros ---"
+    erros.each{ |e| f.puts e}
+end
+
